@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+   
+
+ 
+    
+    <title> :: Prova ::  </title>  
+    
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css" 
+    th:href="@{/bootstrap/css/bootstrap.css}"/>   
+    
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="../static/css/clean-blog.css" 
+    th:href="@{/css/clean-blog.css}"/>
+    
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="../static/font-awesome/css/font-awesome.min.css" th:href="@{/font-awesome/css/font-awesome.min.css}"/>   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" type="text/css" />  
+    
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/jquery/jquery.min.js" th:src="@{/jquery/jquery.min.js}"></script> 
+    <script src="../static/bootstrap/js/bootstrap.bundle.min.js" th:src="@{/bootstrap/js/bootstrap.bundle.min.js}"></script>
+   
+    
+</head>
+<body>
+
+  
+
+<div class="container">
+
+    <div class="row" style="margin-top:20px">
+        <div class="col-xs-12 col-sm-5 col-md-5 col-sm-offset-2 col-md-offset-3">
+            <form th:action="@{/login}" method="post">
+                <fieldset>
+                    <h1>Please Sign In</h1>
+
+                    <div th:if="${param.error}">
+                        <div class="alert alert-danger">
+                            Invalid username and password.
+                        </div>
+                    </div>
+                    <div th:if="${param.logout}">
+                        <div class="alert alert-info">
+                            You have been logged out.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="username" id="username" class="form-control input-lg"
+                               placeholder="UserName" required="true" autofocus="true"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" id="password" class="form-control input-lg"
+                               placeholder="Password" required="true"/>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <input type="submit" class="btn btn-lg btn-primary btn-block" value="Sign In"/>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
