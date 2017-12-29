@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 target/
 !.mvn/wrapper/maven-wrapper.jar
 
@@ -22,3 +23,7 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+=======
+.settings
+.mvn
+>>>>>>> 8e7949376a8c2bceda9664b7b63bac1afa31b0a4
